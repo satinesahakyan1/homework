@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+  <header>
+    <div class="logo">
+      <img src="./img/logo.png" alt="Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Main</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="functions.html" class="active">Functions</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="functions">
+    <input type="number" id="ex">
+    <label for="choices">Ընտրիր Ֆունկցիան:</label>
+    <select id="exerciseSelect">
+        <option value="0"></option>
+        <option id="ex1" value="1">1. Կլորացնել 2 տասնորդական</option>
+        <option id="ex2" value="2">2. Ստուգել թիվ է՞</option>
+        <option id="ex3" value="3">3. Թիվ → string երկարությունը</option>
+        <option id="ex4" value="4">4. Վերադարձնել ամբողջ մասը</option>
+        <option id="ex5" value="5">5. Տառերը մեծատառ</option>
+        <option id="ex6" value="6">6. Ստուգել բառը տեքստում</option>
+        <option id="ex7" value="7">7. Փոխարինել բացատները _</option>
+        <option id="ex8" value="8">8. Առաջին 3 և վերջին 3 նիշերը</option>
+        <option id="ex9" value="9">9. Հեռացնել սկզբի և վերջի բացատները</option>
+        <option id="ex10" value="10">10. Տեքստի երկարությունը</option>
+        <option id="ex11" value="11">11. Ավելացնել նոր էլեմենտ զանգվածի վերջում</option>
+        <option id="ex12" value="12">12. Հեռացնել զանգվածի վերջին էլեմենտը</option>
+        <option id="ex13" value="13">13. Առաջին >10 ինդեքսը</option>
+        <option id="ex14" value="14">14. Ֆիլտրել զույգ թվերը</option>
+        <option id="ex15" value="15">15. Բազմապատկել զանգվածը 2-ով</option>
+        <option id="ex16" value="16">16. Զանգվածի գումարը</option>
+        <option id="ex17" value="17">17. Ստուգել պարունակում է՞ որոշակի էլեմենտ</option>
+        <option id="ex18" value="18">18. Միացնել երկու զանգված</option>
+        <option id="ex19" value="19">19. Զանգվածի կտորը (slice 1–3)</option>
+        <option id="ex20" value="20">20. Դասավորել զանգվածը աճման կարգով</option>
+    </select>
+    <form id="myForm">
+        <input name="name" placeholder="Անուն">
+        <input name="age" placeholder="Տարիք">
+        <input name="city" placeholder="Քաղաք">
+        <button type="submit">Ստեղծել օբյեկտ</button>
+        </form>
+    <div id="buttons" style="display:none;">
+        <button onclick="showKeys()">21 Բանալիները</button>
+        <button onclick="showValues()">22 Արժեքները</button>
+        <button onclick="checkKey()">23 Ստուգել բանալիի առկայությունը</button>
+        <button onclick="mergeObjects()">24 Միացնել երկու օբյեկտ</button>
+        <button onclick="showEntries()">25 [Բանալին, Արժեք] զույգերը</button>
+    </div>
+    <pre id="output"></pre>
+    <p id="result"></p>
+  </main>
+  <script src="./script.js"></script>
+</body>

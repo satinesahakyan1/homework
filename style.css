@@ -63,11 +63,21 @@ main h1 {
   min-width: 250px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
+
 }
 
 .news:hover {
   transform: translateY(-5px);
+  /* transform: rotate(45deg); */
+  /* transition: background-color 3s linear;
+  animation: colorChange 12s; */
 }
+/* @keyframes colorChange {
+  0%   { background-color: red; }
+  33%  { background-color: green; }
+  66%  { background-color: blue; }
+  100% { background-color: red; } /* Վերադառնում է սկզբնական գույնին 
+}*/
 
 .news img {
   width: 100%;
@@ -172,6 +182,14 @@ footer a {
   text-decoration: none;
 }
 
+.functions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
 
 @media (max-width: 921px) and (min-width: 768px) {
   .news {
