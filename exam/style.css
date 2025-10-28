@@ -9,6 +9,8 @@
     animation: bord 5s;
 }
 
+
+
 @keyframes bord {
     0% {
         border-radius: 150px;
