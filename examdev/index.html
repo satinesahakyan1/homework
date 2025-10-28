@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/favicon.png ">
+    <link rel="stylesheet" href="style.css">
+    <title>Երկրների Տնտեսական Ցուցանիշներ</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="body2">
+<aside class="sidebar">
+    <button class="menu-btn">Menu</button>
+
+    <div class="sidebar-icons">
+        <span title="Search" class="icon-item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+        </span>
+
+        <span title="Home" class="icon-item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9.5L12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5z" />
+            </svg>
+        </span>
+
+        <span title="Stats" class="icon-item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="6" y1="20" x2="6" y2="14" />
+                <line x1="12" y1="20" x2="12" y2="10" />
+                <line x1="18" y1="20" x2="18" y2="4" />
+            </svg>
+        </span>
+
+        <span title="Notifications" class="icon-item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+                <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+            </svg>
+        </span>
+
+        <span title="History" class="icon-item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+            </svg>
+        </span>
+
+        <span title="Packages" class="icon-item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16.5 9.4 7.5 4.21 2 7.5v9l5.5 3.29 9-5.19V7.5L16.5 9.4z" />
+                <path d="M2 7.5l10 5.7 10-5.7M12 13.2v9" />
+            </svg>
+        </span>
+    </div>
+
+    <div class="logout"><a href="index.html" id="logout_a">
+        <span title="Logout" class="icon-item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                <polyline points="16 17 21 12 16 7" />
+                <line x1="21" y1="12" x2="9" y2="12" />
+            </svg>
+        </span>
+    </a>
+    </div>
+</aside>
+
+<aside class="sidebar-expanded">
+    <div class="menu-top">
+        <button class="menu-toggle ">Open all</button>
+    </div>
+
+    <div class="menu-header">
+        <input type="text" placeholder="Search..." class="search-input" id="search-input">
+    </div>
+
+    <div class="menu-items" id="menu_list">
+        <ul class="menu_list">
+
+            <li class="menu_item">
+                <span class="homeButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M3 9.5L12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5z" />
+                    </svg> Home
+                </span>
+                <span class="arrow" id="home-arrow">🔽</span>
+                <ul class="sub_menu">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">Recent Updates</a></li>
+                </ul>
+            </li>
+
+            <li class="menu_item">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <line x1="6" y1="20" x2="6" y2="14" />
+                        <line x1="12" y1="20" x2="12" y2="10" />
+                        <line x1="18" y1="20" x2="18" y2="4" />
+                    </svg> Stats
+                </span>
+                <span class="arrow">🔽</span>
+                <ul class="sub_menu">
+                    <li><a href="#">Revenue</a></li>
+                    <li><a href="#">Growth</a></li>
+                    <li><a href="#">Efficiency</a></li>
+                </ul>
+            </li>
+
+            <li class="menu_item">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                    </svg> Notifications
+                </span>
+                <span class="arrow">🔽</span>
+                <ul class="sub_menu">
+                    <li><a href="#">All Notifications</a></li>
+                    <li><a href="#">Alerts</a></li>
+                    <li><a href="#">User Messages</a></li>
+                </ul>
+            </li>
+
+            <li class="menu_item">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg> History
+                </span>
+                <span class="arrow">🔽</span>
+                <ul class="sub_menu">
+                    <li><a href="#">Recent Activity</a></li>
+                    <li><a href="#">Archived Logs</a></li>
+                </ul>
+            </li>
+            <li class="menu_item">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M16.5 9.4 7.5 4.21 2 7.5v9l5.5 3.29 9-5.19V7.5L16.5 9.4z" />
+                        <path d="M2 7.5l10 5.7 10-5.7M12 13.2v9" />
+                    </svg> Packages
+                </span>
+                <span class="arrow">🔽</span>
+                <ul class="sub_menu">
+                    <li><a href="#">Active Packages</a></li>
+                    <li><a href="#">Expired Packages</a></li>
+                    <li><a href="#">Upgrade</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="menu-footer">
+        <a href="index.html" class="a-logout">Logout</a>
+    </div>
+</aside>
+
+
+<main class="container2">
+    <h1 class="H1">Երկրների Տնտեսական Ցուցանիշներ</h1>
+    <div class="select_options">
+        <select name="" id="single" data-search="false" >
+            <option value="" disabled selected hidden>Ընտրիր երկիրը</option>
+            <option value="">ԱՄՆ</option>
+            <option value="">Ճապոնիա</option>
+            <option value="">Գերմանիա</option>
+            <option value="">Չինաստան</option>
+            <option value="">Ֆրանսիա</option>
+            <option value="">Իտալիա</option>
+            <option value="">Իսպանիա</option>
+            <option value="">Հայաստան</option>
+            <option value="">Հունաստան</option>
+            <option value="">Բանգլադեշ</option>
+            <option value="">Հարավային Կորեա</option>
+        </select>
+        <select name="" id="multiple" data-search="false" data-multiple="true" >
+            <option value="" disabled selected hidden>Ընտրիր երկիրը</option>
+            <option value="">ԱՄՆ</option>
+            <option value="">Ճապոնիա</option>
+            <option value="">Գերմանիա</option>
+            <option value="">Չինաստան</option>
+            <option value="">Ֆրանսիա</option>
+            <option value="">Իտալիա</option>
+            <option value="">Իսպանիա</option>
+            <option value="">Հայաստան</option>
+            <option value="">Հունաստան</option>
+            <option value="">Բանգլադեշ</option>
+            <option value="">Հարավային Կորեա</option>
+        </select>
+        <select name="" id="search_single" data-search="true" data-multiple="false" >
+            <option value="" disabled selected hidden>Ընտրիր երկիրը</option>
+            <option value="">ԱՄՆ</option>
+            <option value="">Ճապոնիա</option>
+            <option value="">Գերմանիա</option>
+            <option value="">Չինաստան</option>
+            <option value="">Ֆրանսիա</option>
+            <option value="">Իտալիա</option>
+            <option value="">Իսպանիա</option>
+            <option value="">Հայաստան</option>
+            <option value="">Հունաստան</option>
+            <option value="">Բանգլադեշ</option>
+            <option value="">Հարավային Կորեա</option>
+        </select>
+        <select name="" id="search-multiple" data-search="true" data-multiple="true" >
+            <option value="" disabled selected hidden>Ընտրիր երկիրը</option>
+            <option value="">ԱՄՆ</option>
+            <option value="">Ճապոնիա</option>
+            <option value="">Գերմանիա</option>
+            <option value="">Չինաստան</option>
+            <option value="">Ֆրանսիա</option>
+            <option value="">Իտալիա</option>
+            <option value="">Իսպանիա</option>
+            <option value="">Հայաստան</option>
+            <option value="">Հունաստան</option>
+            <option value="">Բանգլադեշ</option>
+            <option value="">Հարավային Կորեա</option>
+        </select>
+        <!-- <button class="select_srch">Search</button> -->
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <div class="bckgr-div">
+                <div class="flag" id="USA"></div>
+                ԱՄՆ
+            </div>
+            <div>
+                <span>6.88 $ - Տնտեսական ցուցանիշ</span>
+                <span class="symbol">🔽</span>
+            </div>
+        </div>
+        <div class="accordion-content">
+            <div class="accordion-main-content">
+                <div class="card1">Բյուջե՝ 6.3 տրիլիոն $</div>
+                <div class="card2">Տնտեսություն՝ Զարգացած, տեխնոլոգիական, ֆինանսական և արդյունաբերական կենտրոն</div>
+                <div class="card3">Արտահանում՝ Էլեկտրոնիկա, ավտոմեքենաներ, բժշկական սարքեր</div>
+                <div class="card4">Ներմուծում՝ Նավթ, հագուստ, էլեկտրոնիկա, ավտոմեքենաներ</div>
+            </div>
+            <div class="accordion-mini-wrapper">
+                <div class="accordion-header-mini">Մանրամասներ <span class="minisymbol">🔽</span></div>
+                <div class="accordion-content-mini">
+                    <div class="info-mini">
+                        <div class="card5">
+                            ԱՄՆ-ի ՀՆԱ-ն՝ մոտ 27 տրիլիոն $, բնակչությունը՝ 335 մլն, գործազրկությունը՝ 3.8%, ֆինանսական կենտրոն՝ Նյու
+                            Յորք։
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <div class="bckgr-div">
+                <div class="flag" id="Japan"></div>
+                Ճապոնիա
+            </div>
+            <div>
+                <span>6.88 $ - Տնտեսական ցուցանիշ</span>
+                <span class="symbol">🔽</span>
+            </div>
+        </div>
+        <div class="accordion-content">
+            <div class="accordion-main-content">
+                <div class="card1">Բյուջե՝ 1.7 տրիլիոն $</div>
+                <div class="card2">Տնտեսություն՝ Արդյունաբերական, ավտոմեքենաներ և էլեկտրոնիկա</div>
+                <div class="card3">Արտահանում՝ Toyota, Sony, Canon, Nissan</div>
+                <div class="card4">Ներմուծում՝ Նավթ, գազ, սննդամթերք</div>
+            </div>
+            <div class="accordion-mini-wrapper">
+                <div class="accordion-header-mini">Մանրամասներ <span class="minisymbol">🔽</span></div>
+                <div class="accordion-content-mini">
+                    <div class="info-mini">
+                        <div class="card5">
+                            Ճապոնիայի ՀՆԱ-ն՝ 4.2 տրիլիոն $, բնակչությունը՝ 125 մլն, գործազրկությունը՝ 2.5%, արդյունաբերական կենտրոն՝
+                            Տոկիո։
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <div class="bckgr-div">
+                <div class="flag" id="Germany"></div>
+                Գերմանիա
+            </div>
+            <div>
+                <span>4.85 $ - Տնտեսական ցուցանիշ</span>
+                <span class="symbol">🔽</span>
+            </div>
+        </div>
+        <div class="accordion-content">
+            <div class="accordion-main-content">
+                <div class="card1">Բյուջե՝ 2.1 տրիլիոն €</div>
+                <div class="card2">Տնտեսություն՝ Եվրոպայի խոշորագույն արդյունաբերական պետություն</div>
+                <div class="card3">Արտահանում՝ Ավտոմեքենաներ, քիմիական ապրանքներ, մեքենաներ</div>
+                <div class="card4">Ներմուծում՝ Հումք, էլեկտրոնիկա, հագուստ</div>
+            </div>
+            <div class="accordion-mini-wrapper">
+                <div class="accordion-header-mini">Մանրամասներ <span class="minisymbol">🔽</span></div>
+                <div class="accordion-content-mini">
+                    <div class="info-mini">
+                        <div class="card5">
+                            Գերմանիայի ՀՆԱ-ն՝ 5 տրիլիոն $, բնակչությունը՝ 84 մլն, գործազրկությունը՝ 3.1%, արդյունաբերական քաղաք՝
+                            Բեռլին։
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <div class="bckgr-div">
+                <div class="flag" id="China"></div>
+                Չինաստան
+            </div>
+            <div>
+                <span>5.42 $ - Տնտեսական ցուցանիշ</span>
+                <span class="symbol">🔽</span>
+            </div>
+        </div>
+        <div class="accordion-content">
+            <div class="accordion-main-content">
+                <div class="card1">Բյուջե՝ 4.5 տրիլիոն ¥</div>
+                <div class="card2">Տնտեսություն՝ Արտադրական գերտերություն</div>
+                <div class="card3">Արտահանում՝ Էլեկտրոնիկա, հագուստ, մեքենաներ</div>
+                <div class="card4">Ներմուծում՝ Էներգիա, հումք, մթերք</div>
+            </div>
+            <div class="accordion-mini-wrapper">
+                <div class="accordion-header-mini">Մանրամասներ <span class="minisymbol">🔽</span></div>
+                <div class="accordion-content-mini">
+                    <div class="info-mini">
+                        <div class="card5">
+                            Չինաստանի ՀՆԱ-ն՝ 17.8 տրիլիոն $, բնակչությունը՝ 1.4 միլիարդ, գործազրկությունը՝ 5%, կենտրոն՝ Շանհայ։
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <div class="bckgr-div">
+                <div class="flag" id="France"></div>
+                Ֆրանսիա
+            </div>
+            <div>
+                <span>3.12 $ - Տնտեսական ցուցանիշ</span>
+                <span class="symbol">🔽</span>
+            </div>
+        </div>
+        <div class="accordion-content">
+            <div class="accordion-main-content">
+                <div class="card1">Բյուջե՝ 1.6 տրիլիոն €</div>
+                <div class="card2">Տնտեսություն՝ Զարգացած, ծառայությունների և զբոսաշրջության վրա հիմնված</div>
+                <div class="card3">Արտահանում՝ Գինի, դեղագործական ապրանքներ, ավիացիա</div>
+                <div class="card4">Ներմուծում՝ Նավթ, մեքենաներ, հագուստ</div>
+            </div>
+            <div class="accordion-mini-wrapper">
+                <div class="accordion-header-mini">Մանրամասներ <span class="minisymbol">🔽</span></div>
+                <div class="accordion-content-mini">
+                    <div class="info-mini">
+                        <div class="card5">
+                            Ֆրանսիայի ՀՆԱ-ն՝ 3.1 տրիլիոն $, բնակչությունը՝ 68 մլն, գործազրկությունը՝ 7%, քաղաք՝ Փարիզ։
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <div class="bckgr-div">
+                <div class="flag" id="Italy"></div>
+                Իտալիա
+            </div>
+            <div>
+                <span>2.25 $ - Տնտեսական ցուցանիշ</span>
+                <span class="symbol">🔽</span>
+            </div>
+        </div>
+        <div class="accordion-content">
+            <div class="accordion-main-content">
+                <div class="card1">Բյուջե՝ 1.1 տրիլիոն €</div>
+                <div class="card2">Տնտեսություն՝ Զարգացած արդյունաբերություն, զբոսաշրջություն և դիզայնի ոլորտ</div>
+                <div class="card3">Արտահանում՝ Ավտոմեքենաներ (Fiat), գինի, հագուստ, սննդամթերք</div>
+                <div class="card4">Ներմուծում՝ Նավթ, հումք, մեքենաներ, մետաղներ</div>
+            </div>
+            <div class="accordion-mini-wrapper">
+                <div class="accordion-header-mini">Մանրամասներ <span class="minisymbol">🔽</span></div>
+                <div class="accordion-content-mini">
+                    <div class="info-mini">
+                        <div class="card5">
+                            Իտալիայի ՀՆԱ-ն՝ 2.1 տրիլիոն $, բնակչությունը՝ 60.3 մլն, գործազրկությունը՝ 6.5%, քաղաք՝ Ռոմա։
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    © 2025 Տնտեսական Ցուցիչներ | Բոլոր իրավունքները պաշտպանված են |
+    <a href="#" class="footer_a">Մեր մասին</a> |
+    <a href="#" class="footer_a">Կապ</a> |
+    <a href="#" class="footer_a">Պայմաններ</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>
