@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="localhost" id="e510c062-020c-47a5-b38e-35932f264dbf" port="4444" nameFormat="DESCRIPTIVE" username="phpuser" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>
