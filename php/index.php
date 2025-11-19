@@ -62,4 +62,60 @@ echo substr($email,-4);
 
 #Խնդիր 7
 
+function getInitials($fullName) {
+    $parts = explode(" ", trim($fullName));
+
+    $initials = "";
+    foreach ($parts as $part) {
+        if ($part !== "") {
+            $initials .= strtoupper($part[0]) . ".";
+        }
+    }
+
+    return $initials;
+}
+
+echo getInitials("john smith"); 
+
 ?>
+
+
+<form>
+    <h2>Registration Form</h2>
+
+    <label>First Name</label>
+    <input type="text" name="first_name" required>
+
+    <label>Last Name</label>
+    <input type="text" name="last_name" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>Password</label>
+    <input type="password" name="password" required>
+
+    <label>Confirm Password</label>
+    <input type="password" name="confirm_password" required>
+
+    <label>Username</label>
+    <input type="text" name="username">
+
+    <label>Phone</label>
+    <input type="tel" name="phone">
+
+    <label>Birth Date</label>
+    <input type="date" name="birthdate">
+
+    <label>Gender</label>
+    <select name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select>
+
+    <label>Address</label>
+    <textarea name="address"></textarea>
+
+    <button type="submit">Register</button>
+</form>
