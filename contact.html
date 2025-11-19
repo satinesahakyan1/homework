@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="./img/logo.png" alt="Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Main</a></li>
+        <li><a href="about.html" >About us</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="functions.html">Functions</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact">
+    <form>
+      <h1>Contact us</h1>
+
+      <input type="text" placeholder="Name Surname" required>
+      <input type="tel" placeholder="Phone" required>
+      <input type="email" placeholder="Email" required>
+      <input type="number" placeholder="Age" min="1" max="100">
+
+      <label>Gender</label>
+      <select>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+
+      <textarea rows="5" placeholder="Write your message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <p>📍 Tavush, Ijevan</p>
+      <p>📧 <a href="mailto:satinesahakyan21@gmail.com">satinesahakyan21@gmail.com</a></p>
+      <p>📞 <a href="tel:+374956231">+374956231</a></p>
+    </div>
+  </footer>
+</body>
+</html>
